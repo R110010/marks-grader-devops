@@ -28,7 +28,7 @@ services:
     image: prom/prometheus
     container_name: prometheus
     volumes:
-      - /home/rajdeep/Raj/devops/projects/marks-grader-devop/prometheus.yml:/etc/prometheus/prometheus.yml
+      - /home/rajdeep/Raj/devops/projects/marks-grader-devops/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
     restart: always
