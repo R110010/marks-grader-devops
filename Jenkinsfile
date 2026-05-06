@@ -4,7 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = "marks-grader"
         TAG = "latest"
-        DATABASE_URL = "postgresql://postgres:password@host.docker.internal:5432/marksdb"
+        DATABASE_URL = "postgresql://postgres:admin123@host.docker.internal:5432/marksdb"
         SECRET_KEY = "supersecretkey"
         ALGORITHM = "HS256"
         ACCESS_TOKEN_EXPIRE_MINUTES = "30"
