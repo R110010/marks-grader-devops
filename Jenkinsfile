@@ -5,6 +5,9 @@ pipeline {
         IMAGE_NAME = "marks-grader"
         TAG = "latest"
         DATABASE_URL = "postgresql://postgres:password@db:5432/marksdb"
+        SECRET_KEY = "supersecretkey"
+        ALGORITHM = "HS256"
+        ACCESS_TOKEN_EXPIRE_MINUTES = "30"
     }
 
     stages {
