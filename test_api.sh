@@ -1,15 +1,14 @@
 #!/bin/bash
-# this test script is onl;y used initailly for testing the db.
 echo "🔐 Logging in..."
-
-LOGIN_RESPONSE=$(curl -s -X POST "http://127.0.0.1:8000/auth/login" \
+# this test script is only used initailly for testing the db.
+LOGIN_RESPONSE=$(curl -s -X POST "http://localhost:8000/auth/login" \
 -H "Content-Type: application/json" \
 -d '{"username":"teacher1","password":"admin123"}')
 
 echo "Login Response:"
-echo $LOGIN_RESPONSE | jq
+echo "$LOGIN_RESPONSE" | jq
 
-TOKEN=$(echo $LOGIN_RESPONSE | jq -r '.access_token')
+TOKEN=$(echo "$LOGIN_RESPONSE" | jq -r '.access_token')
 
 if [ "$TOKEN" == "null" ] || [ -z "$TOKEN" ]; then
   echo "❌ Failed to get token. Exiting..."
