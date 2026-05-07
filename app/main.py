@@ -21,4 +21,4 @@ def startup():
 
 @app.get("/")
 def root():
-    return {"message": "Welcome to Marks Grader DevOps Project"}
+    return {"message": "Welcome to Marks Grader DevOps Project: Version 2"}
